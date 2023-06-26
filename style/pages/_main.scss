@@ -1,0 +1,243 @@
+@use '../util' as *;
+
+main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    .hero { 
+        @include zarovani;
+        background-image: url(../assets/img/big/Bia-2-big.webp);
+        // background-image: url(/img-webp/Bia-4.webp);
+        background-position: 30% 60%;
+        background-size:cover;
+
+        @media screen and (max-width:972px) {
+            background-image: url(../assets/img/normal/Bia-2.webp);
+        }
+
+        .hero-layout {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .nadpis {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: auto 0;
+                    
+                :last-child {
+                    font-size: $fs-m-mobile;
+                    font-family: $font-vesper-bold;
+                    color: $tmavsi-bezova;
+
+                    @media screen and (min-width:972px) {
+                        font-size: $fs-m-tablet;
+                    }
+                    @media screen and (min-width:1200px) {
+                        font-size: $fs-m;
+                        color: $tmavsi-bezova;
+                    }
+                }    
+            }  
+            .scroll {
+                align-self: center;
+                width: 30px;
+                padding-bottom: 1rem;
+                cursor: pointer;
+                animation: scroll 1.5s ease-in-out infinite alternate;
+            }
+            .target {
+                position: absolute;
+                bottom:88px;
+            }
+        }
+    }
+
+    .odstaveni {
+        padding-top: 3%;
+    }
+
+    .sekce {
+        @include zarovani;
+
+        .sekce-layout {
+            display: flex;
+            align-items: flex-start;
+            gap: 3rem;
+            padding-bottom: 2rem;
+
+            .sekce-img1 {
+                @include sekce-img;
+                border-radius: $border-rad;
+                background-image: url(/assets/img/min/Bia-22-min.webp);
+                background-position: 50%;
+            }
+
+            .sekce-img2 {
+                @include sekce-img;
+                border-radius: $border-rad;
+                background-image: url(../assets/img/min/Bia-30-min.webp);
+               
+            }
+    
+            .sekce-img3 {
+                @include sekce-img;
+                border-radius: $border-rad;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                //background-image: url(../assets/img/prukaz.png);
+                height: 350px;
+                img {
+                    max-height: 300px;
+                    border-radius: 20px;   
+                }
+            }
+            .sekce-odstavec {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+
+            @media screen and (max-width:900px) {
+                flex-direction: column;
+                gap:0px;
+                padding-bottom: 0;
+                .sekce-img1, .sekce-img3  {
+                    @include sekce-img-mobile;
+                }
+
+                .sekce-img2 {
+                    display: none;
+                }
+
+                .sekce-odstavec {
+                    width: 100%;
+
+                    a {
+                        align-self: center;
+                    }
+    
+                }
+            }
+        }
+
+        .sekce-chs {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-bottom: 2rem;
+
+            .sekce-img3 {
+                align-self: center;
+            }   
+        }
+    }
+
+    .kontakt {
+        @include zarovani;
+
+        .kontakt-layout {
+            display: flex;
+            align-items: baseline;
+            gap:3rem;
+
+            #odkazy {
+                width:50%;
+                div, span {
+                    padding-left: 1rem;
+                }
+
+
+                .icons {
+                    display: flex;
+                    align-items: center;
+                    gap: .6rem;
+
+                    a:first-child {
+                        width: 3rem;
+                    }
+                    a:last-child {
+                        width: 2.6rem;
+                    }
+                }
+
+            }    
+
+            #formular {
+                width:50%;
+
+                ::placeholder{
+                    color: $off-black;
+                }
+                form{
+                    .odeslat{
+                        display: flex;
+                        justify-content: center;
+                        margin: 0;
+
+                        #submit {
+                            margin: 1rem 0;
+                        }
+                    }
+                }
+
+                @mixin fomular {
+                    background-color: transparent;
+                    margin: .7rem .5rem;
+                    border: 0;
+                    border-bottom: 2px solid $tmavsi-bezova;
+
+                    @media screen and (max-width:900px) {
+                        width:100%
+                    }
+
+                    &:hover {
+                        color: black;
+                    }
+
+                    &:focus {
+                        outline: 0;
+                        color: black;
+                    }
+                }
+                #name,#surname,#email,#subject {
+                    @include fomular;
+                    width: 45%;
+                }
+
+                #message {
+                    @include fomular;
+                    width: 96%;
+                }
+            }
+
+            @media screen and (max-width:700px) {
+                flex-direction: column-reverse;
+                align-items: center;
+                justify-content: center;
+            #odkazy {
+                text-align: center;
+                width: 100%;
+
+                div, span {
+                    padding-left: 0rem;
+                }
+
+                .icons {
+                    justify-content: center;
+                }
+            }
+
+            #formular {
+                width: 100%;
+            }
+
+            }
+        }
+    }
+}

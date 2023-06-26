@@ -1,0 +1,29 @@
+@mixin sekce-img {
+    background-size: cover;
+    width: 50%;
+    height: 350px;
+}
+
+@mixin sekce-img-mobile {
+    width: 100%;
+    height: 300px;
+}
+
+@mixin zarovani {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin right {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    right: 0;
+}
+
+@mixin left {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    left: 0;
+}

@@ -1,0 +1,31 @@
+@use '../util' as *;
+
+button, #submit, .filter-item {
+    margin: 3rem 0;
+    padding: .7em 1.5em;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: bold;
+    color: $tmavsi-bezova;
+    background-color: $bezova;
+    border: 2px solid $tmavsi-bezova;
+    border-radius: $border-rad;
+    font-family: $font-open;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+        background-color: $tmavsi-bezova;
+        box-shadow: 0px 15px 20px rgba(208, 183, 135, 0.4);
+        color: $white;
+        transform: translateY(-7px);
+        
+      }
+
+    &:active {
+        transform: translateY(-1px);
+      }
+}

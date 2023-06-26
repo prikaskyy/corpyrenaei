@@ -1,0 +1,59 @@
+@use '../util/' as *;
+
+.gallery {
+    @include zarovani;
+
+
+    .gallery-layout {
+        display:flex;
+        flex-direction: column;
+
+        .gallery-filter {
+            padding: 0 15px;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+
+            .filter-item{
+                font-size: 17px;
+                display: inline-block;
+                margin: 0;
+                margin-top: 2rem;
+                margin-right: 8px;
+                padding: 8px 20px;
+                line-height: 1.2;
+
+                &.active {
+                    color: $white;
+                    background: $tmavsi-bezova; 
+                }
+            }
+        }
+
+        .gallery-grid {
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+            gap:2rem;
+
+
+            .fotka{
+
+                img {
+                    border: 5px solid $tmavsi-bezova;
+                    border-radius: $border-rad;
+                    height: 300px;
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+                &.show {
+                    animation: fadeIn .5s ease;
+                }
+                &.hide {
+                    display:none;
+                }
+            } 
+        }
+    }
+
+}

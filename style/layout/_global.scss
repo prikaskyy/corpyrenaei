@@ -1,0 +1,95 @@
+@use '../util' as *;
+
+html{
+    scroll-behavior: smooth;  
+}
+
+body {
+    background-color: $bezova;
+    font-family: $font-open;
+    color: $text-color;
+    font-size: $fs-p;
+}
+
+h1 {
+    font-family: $font-vesper-bold;
+    font-size: $fs-xl-mobile;
+    color: $tmavsi-bezova;
+    padding-top: 1rem;
+    
+
+    @media screen and (min-width:972px) {
+        font-size: $fs-xl-tablet;  
+    }
+
+    @media screen and (min-width:1200px) {
+        font-size: $fs-xl;
+    }
+}
+
+h2 {
+    padding: 1.5rem 0;
+    font-family: $font-vesper-bold;
+    font-size: $fs-l-mobile;
+    color: $tmavsi-bezova;
+    line-height: $line;
+    
+
+    @media screen and (min-width:972px) {
+        font-size: $fs-l-tablet;  
+    }
+
+    @media screen and (min-width:1200px) {
+        font-size: $fs-l;
+    }
+}
+
+h3 {
+    padding: .7rem 0;
+    font-family: $font-vesper-bold;
+    font-size: $fs-m-mobile;
+    color: $tmavsi-bezova;
+    
+
+    @media screen and (min-width:972px) {
+        font-size: $fs-m-tablet;  
+    }
+
+    @media screen and (min-width:1200px) {
+        font-size: $fs-m;
+    }
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    font-family: $font-vesper-bold;
+    font-size: $fs-a-mobile;
+    color:black;
+
+
+    @media screen and (min-width:972px) {
+        font-size: $fs-a-tablet;  
+    }
+
+    @media screen and (min-width:1200px) {
+        font-size: $fs-a;
+    }
+}
+
+p {
+    text-align: justify;
+    text-indent: 2rem;
+}
+
+
+
+
+
+
+
+
+

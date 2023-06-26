@@ -1,0 +1,79 @@
+@use '../util/' as *;
+
+.o-fence {
+    @include zarovani;
+
+    .o-fence-layout {
+        padding-top: 3rem;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap:3rem;
+
+        span {
+            padding-bottom: .5rem;
+            text-align: center;
+        }
+
+        @media screen and (max-width:865px) {
+            grid-template-columns: 1fr;
+            padding-top: 1.5rem;
+            gap:0;
+        }
+
+        .o-fence-fotky {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            & img:first-child {
+                width: 100%;
+                border-radius: $border-rad;
+                box-shadow: 0px 15px 20px rgba(208, 183, 135, .9);
+            }
+
+
+            @media screen and (max-width:1200px) {
+                & img:first-child {
+                    width: 100%;
+                }
+    
+            }
+            @media screen and (max-width:865px) {
+                justify-content: center;
+                
+                & img:first-child {
+                    display: none;
+                }
+            }
+
+        }
+        .o-fence-info {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            // span {
+            //     padding-left: 1.5rem;
+            // }
+        }
+    }
+}
+
+.rodokmen {
+    @include zarovani;
+    padding: 5rem 0;
+
+    input {
+        display: none;
+
+        &:checked ~ label > img {
+            transform: scale(1.5);
+            cursor: zoom-out;
+            z-index: 2;
+        }
+    }
+
+    img {
+        transition: transform 0.25s ease;
+        cursor: zoom-in;
+        z-index: 1;
+    }
+}

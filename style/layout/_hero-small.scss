@@ -1,0 +1,30 @@
+@use '../util' as *;
+
+.hero-small {
+    @include zarovani;
+    height: 50vh;
+    background-image: url("../assets/img/big/Bia-40-big.webp");
+    background-size: cover;
+    background-position: 50% 30%;
+
+    @media screen and (max-width:972px) {
+        background-image: url(../assets/img/normal/Bia-40.webp);
+    }
+
+    .hero-small-layout {
+        display: flex;
+        align-items: flex-end;
+
+        // h1 {
+        //     text-shadow: 20px black;
+        // }
+
+        // .hero-small-box{
+        //     padding: 0 2rem;
+        //     margin-bottom: 2rem;
+        //     border-radius: $border-rad;
+        //     background-color: rgba(73, 73, 73, 0.5);
+        //     //background-color: hsl(42, 31%, 94%, .9);
+        // }
+    }
+}

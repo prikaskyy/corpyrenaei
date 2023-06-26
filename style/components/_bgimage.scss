@@ -1,0 +1,127 @@
+@use '../util' as *;
+@media screen and (max-width:1549px) {
+    .prava,.leva,#index-leva1,#index-prava2,#index-leva3,#index-leva4,#index-prava5,
+    #plemeno-leva1,#plemeno-prava2,#plemeno-leva3,#plemeno-prava4,
+    #aktuality-prava1,#aktuality-leva2,#galerie-leva1,#galerie-prava2,
+    #galerie-leva3,#fenka-prava1,#fenka-leva2,#fenka-prava3,#fenka-leva4 {
+        display: none;
+    }
+}
+
+@media screen and (min-width:1550px) {
+    .prava {
+        position: absolute;
+        width: 170px;
+        height: auto;
+        right: 0;
+        margin: -79px 40px;
+        z-index: -1;
+    }
+    
+    .leva {
+        position: absolute;
+        width: 170px;
+        height: auto;
+        left: 0;
+        margin: -98px 40px;
+        z-index: -1;
+    }
+//index
+    #index-leva1 {
+        @include left;
+        width:200px;
+        margin: 90px 0px;
+    }
+
+    #index-prava2 {
+        @include right;
+        margin: 0px 20px;
+    }
+
+    #index-leva3 {
+        @include left;
+        width: 200px;
+        margin: -70px 20px;
+    }
+
+    #index-leva4 {
+        @include left;
+        margin: 70px 20px;
+    }
+
+    #index-prava5 {
+        @include right;
+        margin: 300px 40px;
+    }
+    
+//o plemenu
+    
+    #plemeno-leva1 {
+        @include left;
+        margin: 70px 20px;
+    }
+
+    #plemeno-prava2 {
+        @include right;
+        width: 200px;
+        margin: 0px 40px;
+    }
+
+    #plemeno-leva3 {
+        @include left;
+        width: 200px;
+        margin: 0px 40px;
+    }
+
+    #plemeno-prava4 {
+        @include right;
+        margin: 0px 40px;
+    }
+//aktuality
+    #aktuality-prava1 {
+        @include right;
+        margin: 70px 40px;
+    }
+
+    #aktuality-leva2 {
+        @include left;
+        width: 200px;   
+        margin: 300px 40px;
+        }
+
+//galerie
+    #galerie-leva1 {
+        @include left;
+        margin: 70px 40px;
+    }
+    #galerie-prava2 {
+        @include right;
+        margin: 400px 40px;
+    }
+    #galerie-leva3 {
+        @include left;
+        margin: 600px 40px;
+    }
+//nase fenka
+    #fenka-prava1 {
+        @include right;
+        margin: 70px 40px;
+    }
+
+    #fenka-leva2 {
+        @include left;
+        margin: 400px 40px;
+    }
+
+    #fenka-prava3 {
+        @include right;
+        margin: 170px 40px;
+        z-index: -1;
+    }
+
+    #fenka-leva4 {
+        @include left;
+        margin: 350px 40px;
+        z-index: -1;
+    }
+}

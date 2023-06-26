@@ -1,0 +1,27 @@
+@use '../util/' as *;
+
+.plemeno {
+    @include zarovani;
+    .plemeno-layout {
+        h2 {
+            padding-bottom: 0;
+        }
+        h3 {
+            padding-bottom: 0;
+        }
+        span {
+            font-weight: bold;
+        }
+        ul {
+            list-style-type: circle;
+        }
+        p {
+            text-indent: 2rem;
+            padding-top: 1rem;
+        }
+        .odsazeni {
+
+            text-indent: 0;
+        }
+    }
+}
